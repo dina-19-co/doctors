@@ -1,0 +1,241 @@
+/* تنسيقات عامة */
+:root {
+    --primary-color: #004d40;
+    --secondary-color: #26a69a;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --card-background: #fff;
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    direction: rtl;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* تنسيقات الصفحة الرئيسية */
+.main-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #004d40, #00796b);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.profile-card {
+    background-color: var(--card-background);
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.profile-card:nth-child(1) { animation-delay: 0.1s; }
+.profile-card:nth-child(2) { animation-delay: 0.2s; }
+.profile-card:nth-child(3) { animation-delay: 0.3s; }
+.profile-card:nth-child(4) { animation-delay: 0.4s; }
+.profile-card:nth-child(5) { animation-delay: 0.5s; }
+.profile-card:nth-child(6) { animation-delay: 0.6s; }
+
+.profile-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover .profile-img {
+    transform: scale(1.1);
+}
+
+.profile-name {
+    font-size: 1.6rem;
+    margin-top: 15px;
+    color: var(--primary-color);
+}
+
+.profile-title {
+    color: #777;
+}
+
+/* تنسيقات صفحات البروفايل الفردية */
+.profile-page .header {
+    background: var(--page-primary-color);
+    text-align: center;
+    padding: 40px 0;
+    color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-page .header .profile-image {
+    border-color: var(--page-secondary-color);
+}
+
+.profile-page .header h1, .profile-page .header p {
+    color: #fff;
+}
+
+.profile-page .header .social-links a {
+    color: #fff;
+}
+
+.profile-page .header .social-links a:hover {
+    color: var(--page-secondary-color);
+}
+
+.profile-page h2 {
+    color: var(--page-primary-color);
+    border-bottom-color: var(--page-secondary-color);
+}
+
+.profile-page .footer {
+    background-color: var(--page-primary-color);
+}
+
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* الألوان الخاصة بكل صفحة */
+/* صفحة الدكتورة يمان إبراهيم */
+body.yaman {
+    --page-primary-color: #004d40;
+    --page-secondary-color: #26a69a;
+}
+
+/* صفحة الدكتورة رنا */
+body.rana {
+    --page-primary-color: #5d4037;
+    --page-secondary-color: #8d6e63;
+}
+
+/* صفحة الدكتورة فاتن الجندي */
+body.faten {
+    --page-primary-color: #4527a0;
+    --page-secondary-color: #7e57c2;
+}
+
+/* صفحة الدكتورة دينا الشربيني */
+body.dina {
+    --page-primary-color: #1a237e;
+    --page-secondary-color: #3f51b5;
+}
+
+/* صفحة الدكتورة منال */
+body.manal {
+    --page-primary-color: #d84315;
+    --page-secondary-color: #ff7043;
+}
+
+/* صفحة الدكتورة حنان */
+body.hanan {
+    --page-primary-color: #c62828;
+    --page-secondary-color: #e57373;
+}
+
+/* الرسوم المتحركة */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section-animation {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+.section-animation:nth-child(1) { animation-delay: 0.1s; }
+.section-animation:nth-child(2) { animation-delay: 0.2s; }
+.section-animation:nth-child(3) { animation-delay: 0.3s; }
+.section-animation:nth-child(4) { animation-delay: 0.4s; }
+.section-animation:nth-child(5) { animation-delay: 0.5s; }
+
+/* التجاوب (Responsive Design) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-page .header .profile-info {
+        flex-direction: column;
+    }
+
+    .profile-page .header .profile-details {
+        text-align: center;
+    }
+
+    .profile-page .header .social-links {
+        justify-content: center;
+    }
+}
